@@ -20,4 +20,25 @@
         println "y is in the range [16,inf)"
  }
 
- 
+ int x1=2
+ int x2=33
+ int x3=54
+ int x4=7
+ int xTotal=0
+
+ List xList = [x1, x2, x3, x4]
+ int counter = 0
+ while (counter < xList.size()) {
+     println "printing xList[${counter}] = ${xList[counter]}"
+     xTotal += xList[counter]
+     counter++
+ }
+ println "total is $xTotal"
+
+  for (int i = 0; i < xList.size(); i++) {  // i will be a local varible to the loop
+     println "printing xList[${counter}] = ${xList[i]}"
+ }
+
+  for (int xValue in xList) {  // i will be a local varible to the loop
+     println "printing xValue: ${xValue}"
+ }
