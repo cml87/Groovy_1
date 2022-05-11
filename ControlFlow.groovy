@@ -42,3 +42,51 @@
   for (int xValue in xList) {  // i will be a local varible to the loop
      println "printing xValue: ${xValue}"
  }
+println "_________"
+
+String BRANCH_NAME = "hotfix/7.9";
+
+
+private String getBranchType(String branchName) {
+   if (branchName.equals("master"))
+      return "master"
+   else if (branchName.equals("develop"))
+      return "develop"
+   else if (branchName.startsWith("release/"))
+      return "release"
+   else if (branchName.startsWith("hotfix/"))
+      return "hotfix"
+   else
+      return "not_a_gitflow_branch"
+}
+
+
+private String getVersion_tagRepo (String branchType){
+    switch(branchType) {
+     case "feature":
+         return "fea"
+         break
+     case "master":
+        return "master"
+        break
+     case "develop":
+        return "deve"
+        break
+      case "release":
+        return "rele"
+        break
+      case "hotfix":
+        return "hotfi"
+        break  
+     default:
+        return "unknown_banch type"
+   }
+}
+String ss = getVersion_tagRepo("hotfix")
+println ss
+
+
+// private String getVersion_Nexus (String branchType) {
+
+
+// }
